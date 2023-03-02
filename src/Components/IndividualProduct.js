@@ -14,9 +14,11 @@ export const IndividualProduct = ({individualProduct, addToCart}) => {
             </div>
             <div className='product-text title'>{individualProduct.title}</div>
             <div className='product-text description'>{individualProduct.description}</div>
-            <div className='product-text actualprice'>₹ {individualProduct.actualprice}</div>
             <div className='product-text discountpercent'>{(((individualProduct.actualprice-individualProduct.discountedprice)/individualProduct.actualprice)*100).toFixed(0)} % off</div>
-            <div className='product-text discountedprice'>₹ {individualProduct.discountedprice}</div>
+            <div className='product-align'>
+                <div className='product-text actualprice'>₹ {individualProduct.actualprice}</div>
+                <div className='product-text discountedprice'>₹ {individualProduct.discountedprice}</div>
+            </div>    
             <div className='btn btn-danger btn-md cart-btn' onClick={handleAddToCart}>ADD TO CART</div>
         </div> 
     )

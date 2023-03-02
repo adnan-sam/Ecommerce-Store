@@ -7,6 +7,7 @@ export const AddProducts = () => {
     const [description, setDescription]=useState('');
     const [actualprice, setActualPrice]=useState('');
     const [discountedprice, setDiscountedPrice]=useState('');
+    const [category, setCategory]=useState('');
     const [image, setImage]=useState(null);
 
     const [imageError, setImageError]=useState('');
@@ -45,6 +46,7 @@ export const AddProducts = () => {
                 fs.collection('Products').add({
                     title,
                     description,
+                    category,
                     actualprice: Number(actualprice),
                     discountedprice: Number(discountedprice),
                     url
@@ -91,6 +93,22 @@ export const AddProducts = () => {
                 <label>Discounted Price</label>
                 <input type="number" className='form-control' required
                 onChange={(e)=>setDiscountedPrice(e.target.value)} value={discountedprice}></input>
+                <br></br>
+                <label>Product Category</label>
+                <select className='form-control' required
+                value={category} onChange={(e)=>setCategory(e.target.value)}>
+                    <option value=""> Select Product Category</option>
+                    <option>Paints</option>
+                    <option>Distemper</option>
+                    <option>Adhesive</option>
+                    <option>Cleaning</option>
+                    <option>Sanitary Ware & Faucets</option>
+                    <option>Tools</option>
+                    <option>Locks</option>
+                    <option>Door Hardware</option>
+                    <option>Glass Fittings & Accessories</option>
+                    <option>Electrical</option>
+                </select>
                 <br></br>
                 <label>Upload Product Image</label>
                 <input type="file" id="file" className='form-control' required

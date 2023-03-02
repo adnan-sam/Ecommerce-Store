@@ -2,7 +2,7 @@ import React,{useState, useEffect} from 'react'
 import {Navbar} from './Navbar'
 import {auth,fs} from '../Config/Config'
 import { CartProducts } from './CartProducts';
-import StripeCheckout from 'react-stripe-checkout'
+// import StripeCheckout from 'react-stripe-checkout'
 import paymentsrc from '../Images/payment.jpg'
 
 export const Cart = () => {

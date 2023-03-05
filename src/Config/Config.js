@@ -1,21 +1,24 @@
-import firebase from "firebase/app";
-import "firebase/auth";
+// v9 compat packages are API compatible with v8 code
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+import 'firebase/compat/storage'
 
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyAdZfDGxYllSlMvH2SG1m3YqH53erWxlRI",
-  authDomain: "ymtraders-700119-6fed9.firebaseapp.com",
-  projectId: "ymtraders-700119-6fed9",
-  storageBucket: "ymtraders-700119-6fed9.appspot.com",
-  messagingSenderId: "165781067721",
-  appId: "1:165781067721:web:e12b965f929927aad2ba18",
-  measurementId: "G-B51X8R76MP"
-};
+    apiKey: "AIzaSyAlxblzzaaL_ftCtgHnFKDpA_U3uWFnoEE",
+    authDomain: "ymtraders-700119.firebaseapp.com",
+    databaseURL: "https://ymtraders-700119-default-rtdb.firebaseio.com",
+    projectId: "ymtraders-700119",
+    storageBucket: "ymtraders-700119.appspot.com",
+    messagingSenderId: "899435600984",
+    appId: "1:899435600984:web:6804931541c305d6d1be2d",
+    measurementId: "G-BXG57PHG02"
+  };
 
-  const firebaseApp=firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-  const auth = firebaseApp.auth();
-  const fs= firebaseApp.firestore();
-  const storage = firebaseApp.storage();
+const auth = firebase.auth();
+const fs = firebase.firestore();
+const storage = firebase.storage();
 
-  export {auth,fs,storage};
+export {auth,fs,storage}

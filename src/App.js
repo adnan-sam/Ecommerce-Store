@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Router, Switch, Route } from 'react-router-dom'; // eslint-disable-next-line
 import { Home } from './Components/Home'
 import { Login } from "./Components/Login";
 import { Signup } from "./Components/Signup";

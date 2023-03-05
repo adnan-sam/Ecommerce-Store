@@ -155,9 +155,9 @@ export const Cart = () => {
                         {/* <StripeCheckout
                         // For the time being I'm removing the pay with card option
                         ></StripeCheckout> */}
-                        <a href='#' className='btn btn-success disabled'>PAY USING UPI APP</a>
+                        {/* <a href="" className='btn btn-success disabled'>PAY USING UPI APP</a> */}
                         <br></br>
-                        <a href='#' className='btn btn-warning'>PAY CASH TO SHOP OWNER</a>
+                        {/* <a href="" className='btn btn-warning'>PAY CASH TO SHOP OWNER</a> */}
                         <br></br>
                         <h5>OR PAY USING THE BELOW QR CODE</h5>
                         <br></br>
